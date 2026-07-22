@@ -4,10 +4,12 @@ public:
         int n=s.size();
         int st =0;
         int e=n-1;
-        while(st<e){
-            swap(s[st],s[e]);
-            st++;e--;
-        }
+        while(st < e){
+    s[st] ^= s[e];
+    s[e] ^= s[st];
+    s[st] ^= s[e];
+    st++; e--;
+}
 
     }
 };
